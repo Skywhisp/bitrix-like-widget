@@ -1,0 +1,67 @@
+<button
+  class="like-btn"
+  data-element-id="123"
+>
+  ❤️ Лайк (<span class="like-count">0</span>)
+</button>
+
+<style>
+  .like-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 14px;
+    border: 1px solid #e5e7eb;
+    border-radius: 999px;
+    background: #fff;
+    color: #374151;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      box-shadow 0.2s ease,
+      transform 0.1s ease;
+  }
+
+  .like-btn:hover:not(:disabled) {
+    border-color: #ffb3c1;
+    background: #fff8f9;
+    color: #ff4b6e;
+    box-shadow: 0 3px 10px rgba(255, 75, 110, 0.12);
+  }
+
+  .like-btn:active:not(:disabled) {
+    transform: scale(0.96);
+  }
+
+  .like-btn--active {
+    border-color: #ff4b6e;
+    background: #fff0f3;
+    color: #ff4b6e;
+  }
+
+  .like-btn:focus-visible {
+    outline: none;
+    border-color: #ff4b6e;
+    box-shadow: 0 0 0 3px rgba(255, 75, 110, 0.15);
+  }
+
+  .like-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+
+  .like-count {
+    min-width: 14px;
+    font-variant-numeric: tabular-nums;
+  }
+</style>
+
+<script src="/local/js/like/like.js"></script>
